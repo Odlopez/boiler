@@ -1,0 +1,39 @@
+.total {
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+}
+
+.total__title {
+  font-size: 20px;
+}
+
+.total__desc {
+  margin-bottom: 20px;
+}
+
+.total__clarification {
+  position: relative;
+
+  padding-left: 50px;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  &::before {
+    content: "!";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    font-size: 35px;
+    color: $main-color;
+
+    border: 3px solid $main-color;
+    border-radius: 50%;
+  }
+}

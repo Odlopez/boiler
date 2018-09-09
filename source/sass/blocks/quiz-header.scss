@@ -1,11 +1,17 @@
 .quiz-header {
+  padding: 50px;
+  position: relative;
 
+  text-align: center;
 }
 
-.quiz-header .quiz-header__title {
+.quiz-header__title {
+  width: 60%;
+  margin: 0 auto;
 
+  font-size: 30px;
 }
 
-.quiz-header .quiz-header__desc {
-
-}
+.quiz-header__desc {
+  font-size: 20px;
+}

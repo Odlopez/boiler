@@ -1,5 +1,10 @@
 body {
+  min-width: 1600px;
   margin: 0 auto;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  background: rgba(238, 240, 240, 0.45) url("../img/forest.png") no-repeat center bottom / 100% auto;
 }
 
 img {
@@ -13,6 +18,7 @@ a {
 
 html {
   box-sizing: border-box;
+  min-width: 1600px;
 }
 
 *,

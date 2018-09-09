@@ -154,7 +154,7 @@ gulp.task("copyjs", function () {
 gulp.task("jsChange", function (done) {
   run(
     "copyjs",
-    "minjs",
+    // "compress",
     done
   );
 });
@@ -167,7 +167,7 @@ gulp.task("build", function (done) {
     "sprite",
     "html",
     "htmlmin",
-    "compress",
+    // "compress",
     done
   );
 });

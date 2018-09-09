@@ -1,43 +1,242 @@
 .quiz-form {
+  display: flex;
+  width: 100%;
+  height: 100%;
 
+  transform: translateX(0);
 }
 
-.quiz-form .quiz-form__wrap {
+.quiz-form__wrap {
+  position: relative;
+  z-index: 15;
 
+  display: flex;
+  min-width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+
+  &--first {
+    min-height: 520px;
+  }
+
+  &--third .quiz-form__img {
+    background-image: url("../img/bear.png");
+  }
 }
 
-.quiz-form .quiz-form__inner-quest {
+.quiz-form__inner-quest {
+  position: relative;
+  z-index: 5;
 
+  width: 550px;
 }
 
-.quiz-form .quiz-form__progress {
-
+.quiz-form__progress {
+  margin-bottom: 25px;
 }
 
-.quiz-form .quiz-form__quest {
+.quiz-form__quest {
+  margin-bottom: 7px;
 
+  font-size: 24px;
 }
 
-.quiz-form .quiz-form__hint {
-
+.quiz-form__hint {
+  font-size: 16px;
+  color: #666666;
 }
 
-.quiz-form .quiz-form__inner-input {
+.quiz-form__inner-input {
+  position: relative;
+  z-index: 5;
 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+  margin-bottom: 25px;
 }
 
-.quiz-form .quiz-form__input {
+.quiz-form__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
+  &:focus + .quiz-form__label::before {
+    border-color: $main-color;
+  }
+
+  &:checked + .quiz-form__label::before {
+    box-shadow: inset 0 0 0 3px #dddddd;
+  }
 }
 
-.quiz-form .quiz-form__label {
+.quiz-form__label {
+  position: relative;
 
+  display: inline-block;
+  padding-left: 40px;
+
+  font-size: 16px;
+
+  & ~ & {
+    margin-top: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+
+    background-color: $main-color;
+    background-clip: content-box;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 10px #dddddd;
+    transform: translateY(-50%);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $main-color;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &--conditions {
+    margin-bottom: 15px;
+
+    font-size: 12px;
+  }
 }
 
-.quiz-form .quiz-form__button {
+.quiz-form__button {
+  padding: 15px 45px;
 
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  background-color: $main-color;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    filter: hue-rotate(94deg) grayscale(0.6);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
-.quiz-form .quiz-form__info {
+.quiz-form__info {
+  position: relative;
+  z-index: 5;
 
-}
+  align-self: flex-start;
+  margin-top: 70px;
+}
+
+.quiz-form__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  padding-top: 75%;
+
+  background: url("../img/deadpool.png") no-repeat right bottom;
+  background-size: cover;
+}
+
+.quiz-form__figure {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 50%;
+  max-width: 800px;
+}
+
+.quiz-form__feedback-input {
+  width: 450px;
+  margin-bottom: 15px;
+  padding: 25px;
+
+  font-size: 20px;
+  text-align: center;
+
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+}
+
+.quiz-form__submit {
+  width: 450px;
+  margin-bottom: 15px;
+  padding: 25px;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+
+  background-color: $main-color;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    filter: hue-rotate(94deg) grayscale(0.6);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.quiz-form__sedative {
+  position: relative;
+
+  padding-left: 40px;
+
+  font-size: 12px;
+
+  &::before {
+    content: "!";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+
+    color: $main-color;
+
+    border: 1px solid $main-color;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}

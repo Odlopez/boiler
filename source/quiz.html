@@ -12,6 +12,8 @@
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
+  <!--end svg-sprite -->
+
   <!-- QUIZ-CONTAINER -->
   <div class="quiz-conteiner">
     <!-- QUIZ-HEADER -->
@@ -23,20 +25,24 @@
         Производим котельные для любых целей и на всех видах топлива
       </p>
     </header>
+    <!--end QUIZ-HEADER -->
+
     <!-- QUIZ-MAIN -->
     <main class="quiz-main">
       <!-- QUIZ-CONTENT -->
       <div class="quiz-content">
         <!-- QUIZ-FORM -->
         <form class="quiz-form" action="#" method="POST">
-          <div class="quiz-form__wrap">
+          <!-- page 1 -->
+          <div class="quiz-form__wrap quiz-form__wrap--first">
             <div class="quiz-form__inner-quest">
               <!-- progress -->
               <div class="quiz-form__progress progress">
                 <span class="progress__level">1 из 7</span>
               </div>
+              <!--end progress -->
               <h3 class="quiz-form__quest">
-                На каком топливе будет работать котельная?
+                1. На каком топливе будет работать котельная?
               </h3>
               <p class="quiz-form__hint">
                 Может быть выбрано несколько вариантов
@@ -46,7 +52,7 @@
                 <label class="quiz-form__label" for="gas">Природный газ</label>
                 <input class="quiz-form__input" type="checkbox" name="liquefied" id="liquefied">
                 <label class="quiz-form__label" for="liquefied">СУГ (сжиженный углеводородный газ)</label>
-                <input class="quiz-form__input" type="checkbox" name="oil" id="oil">
+                <input class="quiz-form__input" type="checkbox" name="oil" id="oil" checked>
                 <label class="quiz-form__label" for="oil">Жидкое топливо</label>
                 <input class="quiz-form__input" type="checkbox" name="coal" id="coal">
                 <label class="quiz-form__label" for="coal">Твердое топливо</label>
@@ -55,6 +61,7 @@
               </div>
               <button class="quiz-form__button" type="button">Далее ></button>
             </div>
+            <!-- info -->
             <div class="quiz-form__info info">
               <div class="info__svg-inner">
                 <svg class="info__svg" width="50" height="50">
@@ -63,7 +70,7 @@
                 <svg class="info__svg" width="50" height="50">
                   <use xlink:href="#heart"></use>
                 </svg>
-                <svg class="info__svg" width="50" height="50">
+                <svg class="info__svg info__svg--active" width="50" height="50">
                   <use xlink:href="#money-bag"></use>
                 </svg>
                 <svg class="info__svg" width="50" height="50">
@@ -75,16 +82,16 @@
               </div>
               <div class="info__text-inner">
                 <p class="info__text">
-                  <span class="info__strong">Жидкотопливные котельные работают на:</span>
-                  <span class="info__normal">дизеле, мазуте, печном, и бытовом топливе, отработанном масле и др</span>
-                </p>
-                <p class="info__text">
                   <span class="info__strong">Газовые котельные работают:</span>
-                  <span class="info__normal">внезапно на газу, прикиньте</span>
+                  <span class="info__normal">внезапно на газу, прикинь</span>
                 </p>
                 <p class="info__text">
                   <span class="info__strong">СУГ-котельные работают на:</span>
                   <span class="info__normal">сжиженном газе из зажигалок. Это очень утомительно</span>
+                </p>
+                <p class="info__text info__text--active">
+                  <span class="info__strong">Жидкотопливные котельные работают на:</span>
+                  <span class="info__normal">дизеле, мазуте, печном, и бытовом топливе, отработанном масле и др</span>
                 </p>
                 <p class="info__text">
                   <span class="info__strong">Твердотопливные котельные работают на:</span>
@@ -96,10 +103,365 @@
                 </p>
               </div>
             </div>
+            <!--end info -->
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
           </div>
+          <!--end page 1 -->
+
+          <!-- page 2 -->
+          <div class="quiz-form__wrap quiz-form__wrap--second">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">2 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                2. Какой объем работ вам необходим:
+              </h3>
+              <p class="quiz-form__hint">
+                Может быть выбрано несколько вариантов
+              </p>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="checkbox" name="full-construction" id="full-construction">
+                <label class="quiz-form__label" for="full-construction">Под ключ</label>
+                <input class="quiz-form__input" type="checkbox" name="design" id="design">
+                <label class="quiz-form__label" for="design">Проектирование</label>
+                <input class="quiz-form__input" type="checkbox" name="making" id="making" checked>
+                <label class="quiz-form__label" for="making">Изготовление</label>
+                <input class="quiz-form__input" type="checkbox" name="installation" id="installation">
+                <label class="quiz-form__label" for="installation">Монтаж</label>
+                <input class="quiz-form__input" type="checkbox" name="pnr" id="pnr">
+                <label class="quiz-form__label" for="pnr">ПНР</label>
+                <input class="quiz-form__input" type="checkbox" name="service" id="service">
+                <label class="quiz-form__label" for="service">Обслуживание</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 2 -->
+
+          <!-- page 3 -->
+          <div class="quiz-form__wrap quiz-form__wrap--third">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">3 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                3. Какая мощность котельной необходима?
+              </h3>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="radio" name="power" id="to-360" checked>
+                <label class="quiz-form__label quiz-form__label--radio" for="to-360">до 360 кВт</label>
+                <input class="quiz-form__input" type="radio" name="power" id="from-360-to-1">
+                <label class="quiz-form__label quiz-form__label--radio" for="from-360-to-1">от 360 кВТ до 1 МВт</label>
+                <input class="quiz-form__input" type="radio" name="power" id="from-1-to-3">
+                <label class="quiz-form__label quiz-form__label--radio" for="from-1-to-3">от 1 МВт до 3 МВт</label>
+                <input class="quiz-form__input" type="radio" name="power" id="from-3-to-5">
+                <label class="quiz-form__label quiz-form__label--radio" for="from-3-to-5">от 3 МВт до 5 МВт</label>
+                <input class="quiz-form__input" type="radio" name="power" id="from-5-to-10">
+                <label class="quiz-form__label quiz-form__label--radio" for="from-5-to-10">от 5 МВт до 10 МВт</label>
+                <input class="quiz-form__input" type="radio" name="power" id="from-10">
+                <label class="quiz-form__label quiz-form__label--radio" for="from-10">более 10 МВт</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <!-- info -->
+            <div class="quiz-form__info info">
+              <div class="info__text-inner">
+                <p class="info__text info__text--active">
+                  <span class="info__strong">Котельная мощностью до 360 кВт:</span>
+                  <span class="info__normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde exercitationem enim ad eveniet itaque alias ea cum porro sit eos, numquam vel obcaecati quam repudiandae saepe incidunt qui! Magni, placeat.</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Котельная мощностью от 360 кВт до 1 МВт:</span>
+                  <span class="info__normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum perferendis vel vitae in id laboriosam, suscipit necessitatibus eaque delectus ipsam cupiditate at magnam recusandae quos praesentium accusantium nulla, explicabo amet.</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Котельная мощностью от 1 MВт до 3 МВт:</span>
+                  <span class="info__normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis explicabo minima totam enim fugit, natus distinctio voluptatibus et exercitationem laudantium corporis est dignissimos perspiciatis aliquid eaque nesciunt obcaecati, debitis perferendis!</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Котельная мощностью от 3 MВт до 5 МВт:</span>
+                  <span class="info__normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, corporis. Deleniti nam quo consequatur necessitatibus fugiat, dolorum quaerat provident, ducimus ad, velit voluptatum sed unde earum sunt aperiam quidem animi.</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Котельная мощностью от 5 MВт до 10 МВт:</span>
+                  <span class="info__normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi reprehenderit officia est eum eius saepe eaque vel minus? Ex vel perferendis alias magni error ullam possimus nisi cupiditate facilis ad.</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Котельная мощностью более 10 МВт:</span>
+                  <span class="info__normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi reprehenderit officia est eum eius saepe eaque vel minus? Ex vel perferendis alias magni error ullam possimus nisi cupiditate facilis ad.</span>
+                </p>
+              </div>
+            </div>
+            <!--end info -->
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 3 -->
+
+          <!-- page 4 -->
+          <div class="quiz-form__wrap quiz-form__wrap--first">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">4 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                4. Котельная необходима для:
+              </h3>
+              <p class="quiz-form__hint">
+                Может быть выбрано несколько вариантов
+              </p>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="checkbox" name="heating" id="heating" checked>
+                <label class="quiz-form__label" for="heating">Отопления</label>
+                <input class="quiz-form__input" type="checkbox" name="ventilation" id="ventilation">
+                <label class="quiz-form__label" for="ventilation">Вентиляции</label>
+                <input class="quiz-form__input" type="checkbox" name="hws" id="hws">
+                <label class="quiz-form__label" for="hws">Горячего водоснабжения</label>
+                <input class="quiz-form__input" type="checkbox" name="steam" id="steam">
+                <label class="quiz-form__label" for="steam">Выработки пара</label>
+                <input class="quiz-form__input" type="checkbox" name="technological-needs" id="technological-needs">
+                <label class="quiz-form__label" for="technological-needs">Технологических нужд</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <!-- info -->
+            <div class="quiz-form__info info">
+              <div class="info__svg-inner">
+                <svg class="info__svg info__svg--active" width="50" height="50">
+                  <use xlink:href="#bear"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#chaplin"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#cinema"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#deadpool"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#roller"></use>
+                </svg>
+              </div>
+              <div class="info__text-inner">
+                <p class="info__text">
+                  <span class="info__strong">Отопление:</span>
+                  <span class="info__normal">это когда теплее, чем попа одноклассницы</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Вентиляция:</span>
+                  <span class="info__normal">это как чих англов</span>
+                </p>
+                <p class="info__text info__text--active">
+                  <span class="info__strong">Горячее водоснабжение:</span>
+                  <span class="info__normal">Это то, что никогда не бывает круглый год</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Выработка пара:</span>
+                  <span class="info__normal">с этим справится и твой чайник</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Технологических нужд:</span>
+                  <span class="info__normal">за непонятными словосочетаниями обычно прячется отмывка бабла</span>
+                </p>
+              </div>
+            </div>
+            <!--end info -->
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 4 -->
+
+          <!-- page 5 -->
+          <div class="quiz-form__wrap quiz-form__wrap--fourth">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">5 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                5. Где планируется размещение котельной:
+              </h3>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="radio" name="location" id="separate-building">
+                <label class="quiz-form__label quiz-form__label--radio" for="separate-building">В отдельно стоящем здании</label>
+                <input class="quiz-form__input" type="radio" name="location" id="inside">
+                <label class="quiz-form__label quiz-form__label--radio" for="inside">Внутри существующего здания</label>
+                <input class="quiz-form__input" type="radio" name="location" id="extension">
+                <label class="quiz-form__label quiz-form__label--radio" for="extension">В пристройке к существующему зданию</label>
+                <input class="quiz-form__input" type="radio" name="location" id="roof">
+                <label class="quiz-form__label quiz-form__label--radio" for="roof">На крыше здания</label>
+                <input class="quiz-form__input" type="radio" name="location" id="change-location">
+                <label class="quiz-form__label quiz-form__label--radio" for="change-location">Планирую менять расположение</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <!-- info -->
+            <div class="quiz-form__info info">
+              <div class="info__text-inner">
+                <p class="info__text">
+                  <span class="info__strong">Отдельно стоящее здание:</span>
+                  <span class="info__normal">Для отшельников и мизантропов</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Внутри существующего здания:</span>
+                  <span class="info__normal">Вписки и все такое</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">В пристройке для существующего здания</span>
+                  <span class="info__normal">Для сторожей и кочегаров</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">На крыше здания:</span>
+                  <span class="info__normal">Карлсон?</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Планирую менять расположение:</span>
+                  <span class="info__normal">Все планируют, но всем лень.</span>
+                </p>
+              </div>
+            </div>
+            <!--end info -->
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 5 -->
+
+          <!-- page 6 -->
+          <div class="quiz-form__wrap quiz-form__wrap--fourth">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">6 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                6. В каком регионе планируется использование котельной:
+              </h3>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="radio" name="region" id="piter" checked>
+                <label class="quiz-form__label quiz-form__label--radio" for="piter">В Санкт-Петербурге</label>
+                <input class="quiz-form__input" type="radio" name="region" id="liningrad-region">
+                <label class="quiz-form__label quiz-form__label--radio" for="liningrad-region">В Ленинградской области</label>
+                <input class="quiz-form__input" type="radio" name="region" id="another-region">
+                <label class="quiz-form__label quiz-form__label--radio" for="another-region">В другом регионе</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 6 -->
+
+          <!-- page 7 -->
+          <div class="quiz-form__wrap quiz-form__wrap--first">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">7 из 7</span>
+              </div>
+              <!--end progress -->
+              <h3 class="quiz-form__quest">
+                7. Самым важным при выборе котельной для вас является:
+              </h3>
+              <p class="quiz-form__hint">
+                Может быть выбрано несколько вариантов
+              </p>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="checkbox" name="urgency" id="urgency">
+                <label class="quiz-form__label" for="urgency">Срочность</label>
+                <input class="quiz-form__input" type="checkbox" name="price" id="price">
+                <label class="quiz-form__label" for="price">Цена</label>
+                <input class="quiz-form__input" type="checkbox" name="reliability" id="reliability" checked>
+                <label class="quiz-form__label" for="reliability">Надежность</label>
+                <input class="quiz-form__input" type="checkbox" name="compactness" id="compactness">
+                <label class="quiz-form__label" for="compactness">Компактность</label>
+                <input class="quiz-form__input" type="checkbox" name="individuality" id="individuality">
+                <label class="quiz-form__label" for="individuality">Индивидуальное проектирование</label>
+                <input class="quiz-form__input" type="checkbox" name="price-quality" id="price-quality">
+                <label class="quiz-form__label" for="price-quality">Соотношение цена-качествок</label>
+                <input class="quiz-form__input" type="checkbox" name="another" id="another">
+                <label class="quiz-form__label" for="another">Другое</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 7 -->
+
+          <!-- page 7 -->
+          <div class="quiz-form__wrap quiz-form__wrap--first">
+            <div class="quiz-form__inner-quest">
+              <h3 class="quiz-form__quest">
+                Получите резульаты расчета стоимости котельной по Вашим параметрам:
+              </h3>
+              <p class="quiz-form__hint">
+                Наш менеджер выполнит расчет и свяжется с Вами для предоставления коммерческого предложения
+              </p>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__feedback-input" type="tel" required placeholder="Введите ваш телефон">
+                <input class="quiz-form__feedback-input" type="email" required placeholder="Введите ваш e-mail">
+                <button class="quiz-form__submit" type="submit">получить расчет стоимости котельной по индивидуальным параметрам</button>
+                <input class="quiz-form__input" type="checkbox" name="conditions" id="conditions">
+                <label class="quiz-form__label quiz-form__label--conditions" for="conditions">Даю согласие на обработку персональных данных и принимаю условия политики конфиденциальности</label>
+                <span class="quiz-form__sedative">Ваши данные в безопасности и  не будут переданы третьим лицам</span>
+              </div>
+            </div>
+            <!-- info -->
+            <div class="quiz-form__info quiz-form__total info total">
+              <div class="info__text-inner">
+                <p class="total__title">
+                  Вам подходит
+                </p>
+                <p class="total__choice info__strong">
+                  Дерево
+                </p>
+                <p class="total__desc info__normal">
+                  Но все это не имеет значения
+                </p>
+                <p class="total__clarification">
+                  Данный тип котельной рекомендован по выбраным параметрам, но вы можете сделать другой
+                </p>
+              </div>
+            </div>
+            <!--end info -->
+            <div class="quiz-form__figure">
+              <figure class="quiz-form__img"></figure>
+            </div>
+          </div>
+          <!--end page 7 -->
         </form>
+        <!--end QUIZ-FORM -->
       </div>
+      <!--end QUIZ-CONTENT -->
     </main>
+    <!--end QUIZ-MAIN -->
   </div>
+  <!--end QUIZ-CONTAINER -->
+
+  <!-- SCRIPTS -->
+  <script src="js/quiz.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/callback.js"></script>
+  <!--end SCRIPTS -->
 </body>
 </html>

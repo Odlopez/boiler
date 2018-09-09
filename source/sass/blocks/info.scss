@@ -1,31 +1,32 @@
 .info {
+  width: 350px;
+  padding: 30px 20px;
 
+  background-color: #ffffff;
 }
 
 .info__svg-inner {
-
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .info__svg {
   fill: #a2a7ab;
 
-  &:hover {
+  &--active {
     fill: #e83936;
   }
 }
 
-.info__text-inner {
-
-}
-
 .info__text {
+  display: none;
 
+  &--active {
+    display: block;
+  }
 }
 
 .info__strong {
-
-}
-
-.info__normal {
-
+  font-weight: 700;
 }
