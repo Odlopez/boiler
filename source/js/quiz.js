@@ -6,8 +6,7 @@
   var createDataForm = function (pages) {
     var self = this;
     self.activePage = 'page_0';
-    self.choise = 'first';
-    self.image = '../img/deadpool.png';
+    self.choise = 'fourth';
     self.translate = 0;
 
     pages.forEach(function (it, index) {

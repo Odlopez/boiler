@@ -6,41 +6,42 @@
   var choices = {
     first: {
       image: '../img/bear.png',
-      text: 'Медведь и водка'
+      text: 'Водка и балалайка'
     },
     second: {
       image: '../img/bush.png',
-      text: 'Дерево и молния'
+      text: 'Кабинет ботаники и маленький японец'
     },
     third: {
       image: '../img/deer.png',
-      text: 'Олень и север'
+      text: 'Север и лемминги'
     },
     fourth: {
       image: '../img/deadpool.png',
-      text: 'Красное трико!'
+      text: 'Красное трико и чимичанги!'
     }
   };
   var srcImages = {
-    'to-360': '../img/bear.png',
-    'from-360-to-1': '../img/bear.png',
-    'from-1-to-3': '../img/bush.png',
-    'from-3-to-5': '../img/bush.png',
-    'from-5-to-10': '../img/deer.png',
-    'from-10': '../img/deer.png',
-    'separate-building': '../img/deadpool.png',
-    'inside': '../img/deadpool.png',
-    'extension': '../img/bush.png',
-    'roof': '../img/deer.png',
-    'change-location': '../img/bear.png',
-    'separate-building': '../img/bear.png',
-    'inside': '../img/deadpool.png',
-    'extension': '../img/deer.png',
-    'roof': '../img/bush.png',
-    'change-location': '../img/deadpool.png'
+    'to-360': 'first',
+    'from-360-to-1': 'first',
+    'from-1-to-3': 'second',
+    'from-3-to-5': 'second',
+    'from-5-to-10': 'third',
+    'from-10': 'third',
+    'separate-building': 'fourth',
+    'inside': 'fourth',
+    'extension': 'second',
+    'roof': 'third',
+    'change-location': 'first',
+    'separate-building': 'first',
+    'inside': 'fourth',
+    'extension': 'third',
+    'roof': 'second',
+    'change-location': 'fourth'
   };
   var wrap = document.querySelector('.quiz-form__wrap');
   var form = document.querySelector('.quiz-form');
+  var totalChoice = document.querySelector('.total__choice');
 
   var ejectTranslate = function () {
     dataForm.translate = +form.style.transform.slice(11, form.style.transform.indexOf('px'));
@@ -63,13 +64,11 @@
     if (e.target.classList.contains('quiz-form__input')) {
       parent.inputs.forEach(function (it, index) {
         if (it.checked) {
-          var imageSource = srcImages[it.id] || dataForm.image;
+          dataForm.choise = srcImages[it.id] || dataForm.choise;
 
           parent.texts[index] ? parent.texts[index].classList.add('info__text--active') : null;
           parent.svgs[index] ? parent.svgs[index].classList.add('info__svg--active') : null;
-          parent.element.querySelector('.quiz-form__img').style.backgroundImage = 'url("' + imageSource + '")';
-
-          dataForm.image = imageSource;
+          parent.element.querySelector('.quiz-form__img').style.backgroundImage = 'url("' + choices[dataForm.choise].image + '")';
         } else {
           parent.texts[index] ? parent.texts[index].classList.remove('info__text--active') : null;
           parent.svgs[index] ? parent.svgs[index].classList.remove('info__svg--active') : null;
@@ -82,7 +81,9 @@
       var progressLevel = parent.element.querySelector('.progress__level');
       progressLevel ? progressLevel.style.width = (parent.index + 1) / 7 * 100 + '%' : null;
 
-      parent.element.querySelector('.quiz-form__img').style.backgroundImage = 'url("' + dataForm.image + '")';
+      parent.element.querySelector('.quiz-form__img').style.backgroundImage = 'url("' + choices[dataForm.choise].image + '")';
+
+      totalChoice.textContent = choices[dataForm.choise].text;
 
       window.animation(form, slideForm, SLIDER_DURATION, linearTimingFunction, ejectTranslate);
     }
