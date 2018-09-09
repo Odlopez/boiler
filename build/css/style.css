@@ -1,0 +1,24 @@
+body {
+  margin: 0 auto; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+.info__svg {
+  fill: #a2a7ab; }
+  .info__svg:hover {
+    fill: #e83936; }

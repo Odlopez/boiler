@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+node_modules/
+npm-debug.*
+source/css/*.css
+Thumbs.db
+b5e2a69a96.720.mp4
+f7a84197ab.720.mp4
+il_FIsiAByE.jpg

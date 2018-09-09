@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style-min.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <!-- svg-sprite -->
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <!-- QUIZ-CONTAINER -->
+  <div class="quiz-conteiner">
+    <!-- QUIZ-HEADER -->
+    <header class="quiz-header">
+      <h2 class="quiz-header__title">
+        Подберите за 7 шагов оптимальный вариант котельной, точно отвечающий Вашим задачам и узнайте ее стоимость
+      </h2>
+      <p class="quiz-header__desc">
+        Производим котельные для любых целей и на всех видах топлива
+      </p>
+    </header>
+    <!-- QUIZ-MAIN -->
+    <main class="quiz-main">
+      <!-- QUIZ-CONTENT -->
+      <div class="quiz-content">
+        <!-- QUIZ-FORM -->
+        <form class="quiz-form" action="#" method="POST">
+          <div class="quiz-form__wrap">
+            <div class="quiz-form__inner-quest">
+              <!-- progress -->
+              <div class="quiz-form__progress progress">
+                <span class="progress__level">1 из 7</span>
+              </div>
+              <h3 class="quiz-form__quest">
+                На каком топливе будет работать котельная?
+              </h3>
+              <p class="quiz-form__hint">
+                Может быть выбрано несколько вариантов
+              </p>
+              <div class="quiz-form__inner-input">
+                <input class="quiz-form__input" type="checkbox" name="gas" id="gas">
+                <label class="quiz-form__label" for="gas">Природный газ</label>
+                <input class="quiz-form__input" type="checkbox" name="liquefied" id="liquefied">
+                <label class="quiz-form__label" for="liquefied">СУГ (сжиженный углеводородный газ)</label>
+                <input class="quiz-form__input" type="checkbox" name="oil" id="oil">
+                <label class="quiz-form__label" for="oil">Жидкое топливо</label>
+                <input class="quiz-form__input" type="checkbox" name="coal" id="coal">
+                <label class="quiz-form__label" for="coal">Твердое топливо</label>
+                <input class="quiz-form__input" type="checkbox" name="electricity" id="electricity">
+                <label class="quiz-form__label" for="electricity">Электричество</label>
+              </div>
+              <button class="quiz-form__button" type="button">Далее ></button>
+            </div>
+            <div class="quiz-form__info info">
+              <div class="info__svg-inner">
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#milk"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#heart"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#money-bag"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#stack"></use>
+                </svg>
+                <svg class="info__svg" width="50" height="50">
+                  <use xlink:href="#target"></use>
+                </svg>
+              </div>
+              <div class="info__text-inner">
+                <p class="info__text">
+                  <span class="info__strong">Жидкотопливные котельные работают на:</span>
+                  <span class="info__normal">дизеле, мазуте, печном, и бытовом топливе, отработанном масле и др</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Газовые котельные работают:</span>
+                  <span class="info__normal">внезапно на газу, прикиньте</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">СУГ-котельные работают на:</span>
+                  <span class="info__normal">сжиженном газе из зажигалок. Это очень утомительно</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Твердотопливные котельные работают на:</span>
+                  <span class="info__normal">угле, торфе, книгах Ленина, соседском заборе, всем, что осталось от бывшей</span>
+                </p>
+                <p class="info__text">
+                  <span class="info__strong">Электрические котельные работают на:</span>
+                  <span class="info__normal">батарейках или рабе с динамомашиной</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
