@@ -39,19 +39,20 @@
     'roof': 'second',
     'change-location': 'fourth'
   };
-  var wrap = document.querySelector('.quiz-form__wrap');
   var form = document.querySelector('.quiz-form');
   var totalChoice = document.querySelector('.total__choice');
 
   var ejectTranslate = function () {
-    dataForm.translate = +form.style.transform.slice(11, form.style.transform.indexOf('px'));
+    var previousPage = 'page_' + (dataForm[dataForm.activePage].index - 1);
+
+    dataForm[previousPage].element.classList.remove('quiz-form__wrap--active');
+    form.style.transform = 'translateX(0)';
   };
 
   var slideForm = function (element, progress) {
-    var width = wrap.offsetWidth;
-    var start = dataForm.translate;
+    var width = dataForm[dataForm.activePage].element.offsetWidth;
 
-     element.style.transform = 'translateX(' + (start + (width * progress * -1)) + 'px)';
+     element.style.transform = 'translateX(' + (width * progress * -1) + 'px)';
   };
 
   var linearTimingFunction = function (step) {
@@ -77,6 +78,8 @@
     } else if (e.target.classList.contains('quiz-form__button')) {
       dataForm.activePage = 'page_' + (parent.index + 1);
       parent = dataForm[dataForm.activePage];
+
+      dataForm[dataForm.activePage].element.classList.add('quiz-form__wrap--active');
 
       var progressLevel = parent.element.querySelector('.progress__level');
       progressLevel ? progressLevel.style.width = (parent.index + 1) / 7 * 100 + '%' : null;

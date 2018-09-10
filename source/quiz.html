@@ -34,7 +34,7 @@
         <!-- QUIZ-FORM -->
         <form class="quiz-form" action="#" method="POST">
           <!-- page 1 -->
-          <div class="quiz-form__wrap quiz-form__wrap--first">
+          <div class="quiz-form__wrap quiz-form__wrap--active quiz-form__wrap--first">
             <div class="quiz-form__inner-quest">
               <!-- progress -->
               <div class="quiz-form__progress progress">
@@ -48,11 +48,11 @@
                 Может быть выбрано несколько вариантов
               </p>
               <div class="quiz-form__inner-input">
-                <input class="quiz-form__input" type="checkbox" name="gas" id="gas">
+                <input class="quiz-form__input" type="checkbox" name="gas" id="gas" checked>
                 <label class="quiz-form__label" for="gas">Природный газ</label>
                 <input class="quiz-form__input" type="checkbox" name="liquefied" id="liquefied">
                 <label class="quiz-form__label" for="liquefied">СУГ (сжиженный углеводородный газ)</label>
-                <input class="quiz-form__input" type="checkbox" name="oil" id="oil" checked>
+                <input class="quiz-form__input" type="checkbox" name="oil" id="oil">
                 <label class="quiz-form__label" for="oil">Жидкое топливо</label>
                 <input class="quiz-form__input" type="checkbox" name="coal" id="coal">
                 <label class="quiz-form__label" for="coal">Твердое топливо</label>
@@ -81,7 +81,7 @@
                 </svg>
               </div>
               <div class="info__text-inner">
-                <p class="info__text">
+                <p class="info__text info__text--active">
                   <span class="info__strong">Газовые котельные работают:</span>
                   <span class="info__normal">внезапно на газу, прикинь</span>
                 </p>
@@ -89,9 +89,9 @@
                   <span class="info__strong">СУГ-котельные работают на:</span>
                   <span class="info__normal">сжиженном газе из зажигалок. Это очень утомительно</span>
                 </p>
-                <p class="info__text info__text--active">
+                <p class="info__text">
                   <span class="info__strong">Жидкотопливные котельные работают на:</span>
-                  <span class="info__normal">дизеле, мазуте, печном, и бытовом топливе, отработанном масле и др</span>
+                  <span class="info__normal">дизеле, мазуте, спирте, ракетном топливе, наверняка, слюне тещи</span>
                 </p>
                 <p class="info__text">
                   <span class="info__strong">Твердотопливные котельные работают на:</span>
@@ -125,11 +125,11 @@
                 Может быть выбрано несколько вариантов
               </p>
               <div class="quiz-form__inner-input">
-                <input class="quiz-form__input" type="checkbox" name="full-construction" id="full-construction">
+                <input class="quiz-form__input" type="checkbox" name="full-construction" id="full-construction" checked>
                 <label class="quiz-form__label" for="full-construction">Под ключ</label>
                 <input class="quiz-form__input" type="checkbox" name="design" id="design">
                 <label class="quiz-form__label" for="design">Проектирование</label>
-                <input class="quiz-form__input" type="checkbox" name="making" id="making" checked>
+                <input class="quiz-form__input" type="checkbox" name="making" id="making">
                 <label class="quiz-form__label" for="making">Изготовление</label>
                 <input class="quiz-form__input" type="checkbox" name="installation" id="installation">
                 <label class="quiz-form__label" for="installation">Монтаж</label>
@@ -385,11 +385,11 @@
                 Может быть выбрано несколько вариантов
               </p>
               <div class="quiz-form__inner-input">
-                <input class="quiz-form__input" type="checkbox" name="urgency" id="urgency">
+                <input class="quiz-form__input" type="checkbox" name="urgency" id="urgency" checked>
                 <label class="quiz-form__label" for="urgency">Срочность</label>
                 <input class="quiz-form__input" type="checkbox" name="price" id="price">
                 <label class="quiz-form__label" for="price">Цена</label>
-                <input class="quiz-form__input" type="checkbox" name="reliability" id="reliability" checked>
+                <input class="quiz-form__input" type="checkbox" name="reliability" id="reliability">
                 <label class="quiz-form__label" for="reliability">Надежность</label>
                 <input class="quiz-form__input" type="checkbox" name="compactness" id="compactness">
                 <label class="quiz-form__label" for="compactness">Компактность</label>
@@ -408,7 +408,7 @@
           </div>
           <!--end page 7 -->
 
-          <!-- page 7 -->
+          <!-- page 8 -->
           <div class="quiz-form__wrap quiz-form__wrap--first">
             <div class="quiz-form__inner-quest">
               <h3 class="quiz-form__quest">
@@ -418,8 +418,8 @@
                 Наш менеджер выполнит расчет и свяжется с Вами для предоставления коммерческого предложения
               </p>
               <div class="quiz-form__inner-input">
-                <input class="quiz-form__feedback-input" type="tel" required placeholder="Введите ваш телефон">
-                <input class="quiz-form__feedback-input" type="email" required placeholder="Введите ваш e-mail">
+                <input class="quiz-form__feedback-input" type="tel" id="tel" name="tel" required placeholder="Введите ваш телефон">
+                <input class="quiz-form__feedback-input" type="email" id="email" name="email" required placeholder="Введите ваш e-mail">
                 <button class="quiz-form__submit" type="submit">получить расчет стоимости котельной по индивидуальным параметрам</button>
                 <input class="quiz-form__input" type="checkbox" name="conditions" id="conditions">
                 <label class="quiz-form__label quiz-form__label--conditions" for="conditions">Даю согласие на обработку персональных данных и принимаю условия политики конфиденциальности</label>
@@ -448,7 +448,7 @@
               <figure class="quiz-form__img"></figure>
             </div>
           </div>
-          <!--end page 7 -->
+          <!--end page 8 -->
         </form>
         <!--end QUIZ-FORM -->
       </div>
@@ -462,6 +462,7 @@
   <script src="js/quiz.js"></script>
   <script src="js/animation.js"></script>
   <script src="js/callback.js"></script>
+  <script src="js/backend.js"></script>
   <!--end SCRIPTS -->
 </body>
 </html>

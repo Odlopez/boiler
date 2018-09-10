@@ -10,7 +10,7 @@
   position: relative;
   z-index: 15;
 
-  display: flex;
+  display: none;
   min-width: 100%;
   height: 100%;
   padding: 0 20px;
@@ -22,6 +22,10 @@
 
   &--third .quiz-form__img {
     background-image: url("../img/bear.png");
+  }
+
+  &--active {
+    display: flex;
   }
 }
 
